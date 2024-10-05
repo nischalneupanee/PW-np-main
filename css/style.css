@@ -1,0 +1,375 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Global Styles */
+.custom-btn {
+    color: var(--text-color);
+    border: 3px solid var(--main-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: 0.2s all ease;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    color: var(--main-color);
+    background-color: white;
+    box-shadow: 0 0 1rem white;
+    border: none;
+}
+
+.dark-btn {
+    background-color: black;
+    border:none;
+}
+
+.custom-badges {
+    color: white;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.nav-btn{
+    background-color: var(--main-color);
+    border: none;
+}
+
+/* Section */
+section {
+    min-height: 100vh;
+    padding: 50px 20px; /* Added padding for spacing in sections */
+}
+
+/* Navbar */
+
+.custom-navigation .nav-item .nav-link:hover, .custom-navigation .nav-item .nav-link:active {
+    color: black;
+}
+
+.custom-header {
+    background: var(--bg-color);
+    padding: 10px 15px;
+}
+
+.custom-navigation {
+    border-radius: 30px;
+    background-color: var(--text-color);
+}
+
+.custom-navigation a,
+.custom-navigation a:active {
+    color: grey;
+    transition: 0.2s all ease;
+    padding: 0 10px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-btn{
+    background-color: var(--main-color);
+}
+
+/* Home */
+#home {
+    background-color: var(--bg-color);
+}
+
+.home-contacts i, .contact-info i {
+    color: var(--main-color);
+    font-size: 2rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 40rem;
+    padding: 0.1rem;
+}
+
+.home-contacts i:hover, .contact-info i:hover {
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: 0 0 1rem white;
+}
+
+#home h4 {
+    color: rgb(182, 180, 180);
+}
+
+#home h3 {
+    color: grey;
+}
+
+.featured-image{
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(20px);
+        border-radius: 45% 55% 45% 55%;
+    }
+}
+
+/* About */
+#about {
+    background-color: var(--second-bg-color);
+}
+
+.about-box {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0.5rem var(--main-color);
+}
+
+/* Skills */
+#skills {
+    background-color: var(--bg-color);/* Add padding for spacing */
+}
+
+.skill-card
+{
+    background-color: var(--second-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 0.5rem white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+/* Portfolio */
+#portfolio {
+    background-color: var(--second-bg-color);
+}
+
+.portfolio-card {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 0 0.5rem var(--main-color);
+    transform: scale(1.05);
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+}
+
+/* Align the left (contact details) and right (form) columns */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-left, .contact-right {
+    flex: 1;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Contact Card Styling */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-left:hover {
+    transform: scale(1.05);
+    background-color: var(--main-color);
+}
+
+.contact-left .card-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.contact-left .card-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Contact Form Styling */
+.contact-right {
+    background-color: var(--second-bg-color);
+    border: none;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-right h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--main-color);
+    box-shadow: none;
+}
+
+/* Button Styling */
+.btn-outline-primary {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--main-color);
+    color: #1f242d;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-left, .contact-right {
+        padding: 1.5rem;
+    }
+}
+
+
+/* Footer */
+.custom-footer {
+    background-color: #1f242d; /* Dark background color */
+    border-top: 4px solid var(--main-color); /* Stylish border on top */
+}
+
+.custom-footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.custom-footer a {
+    color: var(--main-color); /* Color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.custom-footer a:hover {
+    color: #fff; /* Change link color on hover */
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+    .custom-navigation a:hover,
+.custom-navigation a.active {
+    color: black;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.home-contacts {
+    padding: 180px 0px 180px 0;
+}
+
+.home-contacts i {
+    margin-top: 2rem;
+}
+
+.homelg {
+    padding-top: 5rem;
+}
+
+#skills {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#portfolio {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#contact {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .skills-title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+
+    .skill-card {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
